@@ -1,0 +1,14 @@
+ <h2><%= @entry.title %></h2>
+  <h3>by <%= @entry.author %></h3>
+  <%= @entry.content %>
+
+  <br />
+<%= link_to 'back', entries_path %>
+
+<br>
+<%= link_to 'edit', edit_entry_path(@entry) %>
+<br /><br />
+
+
+<%= link_to 'delete', @entry, method: :delete %>
+

@@ -1,0 +1,12 @@
+<h1>Boom Boom Pow</h1>
+
+  <% @entries.each do |entry| %>
+
+  <h2><%= link_to entry.title, entry %></h2>
+  <h3>by <%= entry.author %></h3>
+  <%= entry.content %>
+  <% end %>
+
+    <br /><br />
+  <%= link_to 'Create More Entries!', new_entry_path %>
+
