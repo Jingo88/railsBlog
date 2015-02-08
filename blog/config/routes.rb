@@ -6,60 +6,14 @@ Rails.application.routes.draw do
 
   post '/session' => 'session#create'
 
-  get '/secret' => 'secret#show'
+  get '/secret' => 'entries#show'
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+# Decide on where you want your admin to go, You can have a folder for the non-admins to view the blog post
+# this will be static with zero CRUD capabilities
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+# Build a secret folder and this will have the admin stuff
+# Notice that your /secret leads to the entries/show page. This is targeting your show.html.erb inside of 
+# your entries folder. It will cause issues because the data is not syncing up. Think about how you want 
+# to organize your erbs 
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
 end

@@ -4,7 +4,7 @@ class SessionController < ApplicationController
 	end
 
 	def create
-		
+			
 		# this is used for bcrypt. More secure than sessions
 		user = User.find_by(username: params[:username])
 		
