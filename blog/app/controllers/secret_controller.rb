@@ -1,13 +1,12 @@
 class SecretController < ApplicationController
 
     def show
-    valid_user = session[:valid_user]
+    	@user = User.find_by(id: session[:user_id])
 
-        if valid_user
-            render :show
-        else
-            redirect_to '/login'
-        end
+    	if @user
+    		render :show
+    	else
+    		redirect_to '/login'
+    	end
     end
-
 end
