@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
 
+	# Entry.all looks at the model, which will then locate where in the database you are looking at
 	
 	def index
 		@entries = Entry.all
