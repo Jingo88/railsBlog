@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   post '/session' => 'session#create'
 
-  get '/secret' => 'entries#show'
+  get '/secret' => 'secret#show'
 
 # Decide on where you want your admin to go, You can have a folder for the non-admins to view the blog post
 # this will be static with zero CRUD capabilities
