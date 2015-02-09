@@ -15,7 +15,7 @@ class EntriesController < ApplicationController
 	end
 
 	def show
-		# @entry = Entry.find_by(id: params[:id])
+		@entry = Entry.find_by(id: params[:id])
 
 		@user = User.find_by(id: session[:user_id])
 
